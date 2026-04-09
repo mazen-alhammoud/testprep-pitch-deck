@@ -93,19 +93,15 @@ export default function PrincipalsDeck() {
             The System Behind <span className="gradient-text-primary">Every Score.</span>
           </h2>
           <div className="p-pipeline animate-on-scroll animate-delay-1">
-            {['Diagnostic', 'Data Analysis', 'Personalized Plan', 'Execution', 'Proactive Tracking'].map((s, i) => (
+            {['Diagnostic', 'Data Analysis', 'Personalized Plan', 'Execution', 'Proactive Tracking', 'Engineered Results'].map((s, i, arr) => (
               <div className="p-pipe-group" key={s}>
                 <div className="p-pipe-step">
-                  <div className="p-pipe-dot" />
-                  <span className="p-pipe-label">{s}</span>
+                  <div className={`p-pipe-dot ${i === arr.length - 1 ? 'p-pipe-dot-final' : ''}`} />
+                  <span className={`p-pipe-label ${i === arr.length - 1 ? 'p-pipe-label-final' : ''}`}>{s}</span>
                 </div>
-                {i < 4 && <div className="p-pipe-line" />}
+                {i < arr.length - 1 && <div className="p-pipe-line" />}
               </div>
             ))}
-            <div className="p-pipe-step">
-              <div className="p-pipe-dot p-pipe-dot-final" />
-              <span className="p-pipe-label p-pipe-label-final">Engineered Results</span>
-            </div>
           </div>
           <div className="p-cards-2 animate-on-scroll animate-delay-3">
             <div className="p-card glass-card">

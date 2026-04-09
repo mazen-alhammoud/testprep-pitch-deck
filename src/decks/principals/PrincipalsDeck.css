@@ -252,6 +252,7 @@
 
 .p-pipeline {
   display: flex; align-items: center; justify-content: center; width: 100%;
+  gap: 4px;
 }
 
 .p-pipe-group { display: flex; align-items: center; }
