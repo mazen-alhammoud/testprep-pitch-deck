@@ -1,0 +1,886 @@
+/* ══════════════════════════════════════
+   FAMILIES DECK — DESIGN SYSTEM
+   ══════════════════════════════════════ */
+
+/* ── Shared ── */
+.fam-section-content {
+  max-width: 960px;
+  width: 100%;
+  padding: 0 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.fam-headline {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--black);
+  letter-spacing: -0.02em;
+}
+
+.fam-headline .highlight { color: var(--primary); }
+.fam-headline .highlight-secondary { color: var(--secondary); }
+
+.fam-body-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--gray-600);
+  text-align: center;
+  max-width: 720px;
+}
+
+.fam-body-emphasis {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.fam-subheadline {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black);
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Card system */
+.fam-three-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.fam-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  transition: all 0.25s ease;
+}
+
+.fam-card:hover {
+  border-color: transparent;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.fam-card-accent { height: 4px; width: 100%; }
+.accent-primary { background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+.accent-secondary { background: linear-gradient(90deg, var(--secondary), var(--secondary-light)); }
+
+.fam-card-body { padding: 28px 24px 32px; }
+
+.fam-card-num {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gray-400);
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+
+.fam-card-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.fam-card-body p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--gray-600);
+}
+
+/* ── Mesh BG (reused) ── */
+.fam-cover .mesh-bg,
+.fam-legends .mesh-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.fam-cover .mesh-grid,
+.fam-legends .mesh-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(23, 64, 169, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 64, 169, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.fam-cover .mesh-glow,
+.fam-legends .mesh-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+}
+
+.fam-cover .mesh-glow-primary,
+.fam-legends .mesh-glow-primary {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(23, 64, 169, 0.2), transparent 70%);
+  top: -20%;
+  right: -15%;
+}
+
+.fam-cover .mesh-glow-secondary,
+.fam-legends .mesh-glow-secondary {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 150, 62, 0.15), transparent 70%);
+  bottom: -10%;
+  left: -10%;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 1 — COVER
+   ══════════════════════════════════════ */
+.fam-cover { background: var(--white); overflow: hidden; }
+
+.fam-cover-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 64px;
+}
+
+.fam-cover-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.fam-cover-logo { width: 220px; height: auto; }
+
+.fam-cover-headline {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: left;
+  color: var(--black);
+  letter-spacing: -0.02em;
+}
+
+.fam-cover-headline .highlight { color: var(--primary); }
+
+.fam-cover-right {
+  display: flex;
+  gap: 14px;
+  height: 380px;
+  flex-shrink: 0;
+}
+
+.fam-cover-col-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 200px;
+}
+
+.fam-cover-col-stack .fam-cover-img { flex: 1; }
+
+.fam-cover-img {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid var(--gray-200);
+  transition: all 0.25s ease;
+}
+
+.fam-cover-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.fam-cover-img-tall {
+  width: 200px;
+  border-color: var(--primary);
+  box-shadow: 0 8px 32px rgba(23, 64, 169, 0.12);
+}
+
+.fam-cover-img:hover {
+  border-color: var(--primary);
+  transform: scale(1.02);
+  box-shadow: 0 8px 28px rgba(23, 64, 169, 0.1);
+}
+
+/* ══════════════════════════════════════
+   SLIDE 2 — WHO WE ARE
+   ══════════════════════════════════════ */
+.fam-who { background: var(--gray-50); }
+
+.fam-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.fam-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 28px 16px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.fam-stat-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(23, 64, 169, 0.08);
+  transform: translateY(-2px);
+}
+
+.fam-stat-number {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.fam-stat-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  text-align: center;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 3 — EXAMS
+   ══════════════════════════════════════ */
+.fam-exams { background: var(--white); }
+
+.fam-exam-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.fam-exam-tag {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 100px;
+  background: var(--gray-50);
+  color: var(--black);
+  border: 1px solid var(--gray-200);
+  transition: all 0.25s ease;
+}
+
+.fam-exam-tag:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 2px 12px rgba(23, 64, 169, 0.1);
+}
+
+/* ══════════════════════════════════════
+   SLIDE 4 — SAT INTRO
+   ══════════════════════════════════════ */
+.fam-sat-intro { background: var(--gray-50); }
+
+.fam-sat-specs {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fam-spec-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  min-width: 140px;
+  transition: all 0.25s ease;
+}
+
+.fam-spec-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.fam-spec-highlight {
+  border-color: var(--secondary);
+  background: rgba(255, 150, 62, 0.04);
+}
+
+.fam-spec-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.fam-spec-highlight .fam-spec-value {
+  color: var(--secondary);
+}
+
+.fam-spec-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ══════════════════════════════════════
+   SLIDE 5 — MEASURES / SLIDE 6 — POINTS
+   ══════════════════════════════════════ */
+.fam-measures { background: var(--white); }
+.fam-points { background: var(--gray-50); }
+
+/* ══════════════════════════════════════
+   SLIDE 7 — THE SYSTEM
+   ══════════════════════════════════════ */
+.fam-system { background: var(--white); }
+
+.fam-system-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.fam-step {
+  display: flex;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.fam-step:hover {
+  border-color: transparent;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.fam-step-marker {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fam-step-marker span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.fam-step-marker-final {
+  background: var(--secondary);
+}
+
+.fam-step-body { flex: 1; }
+
+.fam-step-body h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.fam-step-body p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+
+/* ══════════════════════════════════════
+   SLIDE 8 — ELMY
+   ══════════════════════════════════════ */
+.fam-elmy { background: var(--gray-50); }
+
+.fam-elmy strong { color: var(--secondary); font-weight: 700; }
+
+.fam-elmy-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.fam-elmy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.fam-elmy-item:hover {
+  border-color: var(--secondary);
+  box-shadow: 0 4px 16px rgba(255, 150, 62, 0.1);
+}
+
+.fam-elmy-check {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.fam-elmy-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+
+.fam-elmy-screenshot {
+  width: 100%;
+  max-width: 700px;
+  height: 180px;
+  border: 2px dashed var(--gray-200);
+  border-radius: 14px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fam-elmy-screenshot span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-400);
+}
+
+/* ══════════════════════════════════════
+   SLIDE 9 — WE HANDLE EVERYTHING
+   ══════════════════════════════════════ */
+.fam-handle { background: var(--white); }
+
+/* ══════════════════════════════════════
+   SLIDE 10 — INSTRUCTORS
+   ══════════════════════════════════════ */
+.fam-instructors { background: var(--gray-50); }
+
+.fam-instructor-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.fam-instructor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.fam-instructor-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  border: 2px dashed var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.fam-instructor-avatar span {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-400);
+}
+
+.fam-instructor-card:hover .fam-instructor-avatar {
+  border-color: var(--primary);
+  border-style: solid;
+  background: rgba(23, 64, 169, 0.06);
+}
+
+.fam-instructor-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.fam-instructor-role {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+/* ══════════════════════════════════════
+   SLIDE 11 — TRUSTED BY
+   ══════════════════════════════════════ */
+.fam-trusted { background: var(--white); }
+
+.fam-schools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.fam-school-placeholder {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--gray-200);
+  border-radius: 12px;
+  background: var(--gray-50);
+  transition: all 0.25s ease;
+}
+
+.fam-school-placeholder span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-400);
+}
+
+.fam-school-placeholder:hover {
+  border-color: var(--primary);
+  border-style: solid;
+  box-shadow: 0 4px 16px rgba(23, 64, 169, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════
+   SLIDE 12 — RESULTS
+   ══════════════════════════════════════ */
+.fam-results { background: var(--gray-50); }
+
+.fam-jumps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.fam-jump-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 28px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  transition: all 0.25s ease;
+}
+
+.fam-jump-card:hover {
+  border-color: transparent;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.fam-jump-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fam-jump-name { font-size: 16px; font-weight: 600; color: var(--black); }
+
+.fam-jump-gain {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+.fam-jump-gain-top { color: var(--secondary); }
+
+.fam-thermo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.fam-thermo-track {
+  flex: 1;
+  height: 24px;
+  background: var(--gray-100);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+}
+
+.fam-thermo-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 12px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fam-thermo-fill-before { background: var(--gray-200); z-index: 0; }
+.fam-thermo-fill-after { background: linear-gradient(90deg, var(--primary), var(--primary-light)); z-index: 1; }
+.fam-thermo-fill-top { background: linear-gradient(90deg, var(--secondary), var(--secondary-light)); }
+
+.fam-thermo-label-before {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-400);
+  min-width: 36px;
+  text-align: right;
+}
+
+.fam-thermo-label-after {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary);
+  min-width: 36px;
+}
+
+.fam-thermo-label-top { color: var(--secondary); }
+
+/* Testimonials */
+.fam-testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.fam-testimonial {
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.fam-testimonial:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(23, 64, 169, 0.06);
+}
+
+.fam-testimonial p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-600);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.fam-testimonial span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* ══════════════════════════════════════
+   SLIDE 13 — LIFE AT TESTPREP
+   ══════════════════════════════════════ */
+.fam-life { background: var(--white); }
+
+.fam-callout {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.fam-life-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.fam-life-img {
+  height: 140px;
+  border-radius: 12px;
+  border: 2px dashed var(--gray-200);
+  background: var(--gray-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.fam-life-img span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-400);
+}
+
+.fam-life-img:hover {
+  border-color: var(--primary);
+  border-style: solid;
+  transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════
+   SLIDE 14 — LEGENDS / CLOSING
+   ══════════════════════════════════════ */
+.fam-legends { background: var(--white); overflow: hidden; }
+
+.fam-legends .mesh-glow-primary {
+  top: -20%;
+  left: -15%;
+}
+
+.fam-legends .mesh-glow-secondary {
+  bottom: -10%;
+  right: -10%;
+}
+
+.fam-legends-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  max-width: 720px;
+  padding: 0 48px;
+}
+
+.fam-legends-headline {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--black);
+  letter-spacing: -0.02em;
+}
+
+.fam-legends-headline .highlight-secondary { color: var(--secondary); }
+
+.fam-legends-wall {
+  width: 100%;
+  height: 160px;
+  border: 2px dashed var(--gray-200);
+  border-radius: 14px;
+  background: var(--gray-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fam-legends-wall span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-400);
+}
+
+.fam-legends-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.fam-legends-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-600);
+}
+
+.fam-legends-text strong { color: var(--secondary); }
+
+.fam-legends-cta-line {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--black);
+  margin-top: 4px;
+}
+
+.fam-legends-closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 40px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  width: 100%;
+}
+
+.fam-legends-action {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.fam-legends-action-sub {
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+.fam-legends-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.fam-legends-phone {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.fam-legends-contact > span:nth-child(2) {
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.fam-legends-socials {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.fam-social-tag {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-600);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.fam-legends-logo {
+  width: 140px;
+  height: auto;
+  margin-top: 8px;
+}

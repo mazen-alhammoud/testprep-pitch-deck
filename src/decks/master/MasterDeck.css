@@ -1,0 +1,145 @@
+.master-deck {
+  width: 100%;
+  height: 100vh;
+}
+
+/* ── Mesh Grid Background ── */
+.mesh-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.mesh-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(23, 64, 169, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 64, 169, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.mesh-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+}
+
+.mesh-glow-primary {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(23, 64, 169, 0.25), transparent 70%);
+  top: -15%;
+  right: -10%;
+}
+
+.mesh-glow-secondary {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 150, 62, 0.2), transparent 70%);
+  bottom: -10%;
+  left: -8%;
+}
+
+/* ── Landing Content ── */
+.landing-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 320px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gray-400);
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+}
+
+/* ── CTA Buttons ── */
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 380px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  cursor: pointer;
+  background: var(--white);
+  color: var(--black);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.cta:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(23, 64, 169, 0.12);
+  transform: translateY(-2px);
+}
+
+.cta:hover .cta-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--primary);
+}
+
+.cta-icon {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--gray-50);
+  flex-shrink: 0;
+}
+
+.cta-label {
+  flex: 1;
+  text-align: left;
+}
+
+.cta-arrow {
+  font-size: 18px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--gray-400);
+}
+
+/* Individual CTA hover accents */
+.cta-principals:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(23, 64, 169, 0.12);
+}
+
+.cta-families:hover {
+  border-color: var(--secondary);
+  box-shadow: 0 4px 20px rgba(255, 150, 62, 0.15);
+}
+
+.cta-families:hover .cta-arrow {
+  color: var(--secondary);
+}
