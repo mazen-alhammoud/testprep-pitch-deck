@@ -8,17 +8,17 @@ export default function FamiliesDeck() {
 
       {/* SLIDE 1 — COVER */}
       <Slide className="fam-cover">
-        <div className="mesh-bg">
-          <div className="mesh-grid" />
-          <div className="mesh-glow mesh-glow-primary" />
-          <div className="mesh-glow mesh-glow-secondary" />
+        <div className="fam-bg">
+          <div className="dot-grid" />
+          <div className="fam-glow fam-glow-1" />
+          <div className="fam-glow fam-glow-2" />
         </div>
         <div className="fam-cover-content">
           <div className="fam-cover-left">
             <img src={`${import.meta.env.BASE_URL}testpreo-logo.svg`} alt="Test.Prep" className="fam-cover-logo" />
             <h1 className="fam-cover-headline">
               We don't teach the test.<br />
-              <span className="highlight">We engineer the score.</span>
+              <span className="gradient-text-primary">We engineer the score.</span>
             </h1>
           </div>
           <div className="fam-cover-right">
@@ -40,23 +40,23 @@ export default function FamiliesDeck() {
       {/* SLIDE 2 — WHO WE ARE */}
       <Slide className="fam-who">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            For over 12 years, TestPrep has set the standard for standardized test preparation <span className="highlight">in Lebanon.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            For over 12 years, TestPrep has set the standard for standardized test preparation <span className="gradient-text-primary">in Lebanon.</span>
           </h2>
           <div className="fam-stats-grid">
-            <div className="fam-stat-card">
+            <div className="fam-stat-card glass-card">
               <span className="fam-stat-number">20,000+</span>
               <span className="fam-stat-label">Students Trained</span>
             </div>
-            <div className="fam-stat-card">
+            <div className="fam-stat-card glass-card">
               <span className="fam-stat-number">92%</span>
               <span className="fam-stat-label">Improved by 50+ Points</span>
             </div>
-            <div className="fam-stat-card">
+            <div className="fam-stat-card glass-card">
               <span className="fam-stat-number">12+</span>
               <span className="fam-stat-label">Years of Operation</span>
             </div>
-            <div className="fam-stat-card">
+            <div className="fam-stat-card glass-card">
               <span className="fam-stat-number">100+</span>
               <span className="fam-stat-label">Expert Instructors</span>
             </div>
@@ -70,8 +70,8 @@ export default function FamiliesDeck() {
       {/* SLIDE 3 — EXAMS WE COVER */}
       <Slide className="fam-exams">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            Every Standardized Test. <span className="highlight">One System.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            Every Standardized Test. <span className="gradient-text-primary">One System.</span>
           </h2>
           <div className="fam-exam-tags">
             {['SAT & PSAT', 'MCAT', 'GMAT & GRE', 'IELTS & TOEFL', 'EEE', 'Duolingo English Test', 'French Concours & DELF', 'CFA'].map((exam) => (
@@ -87,8 +87,8 @@ export default function FamiliesDeck() {
       {/* SLIDE 4 — LET'S TALK ABOUT THE SAT */}
       <Slide className="fam-sat-intro">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            Here Is What You Are <span className="highlight">Actually Preparing For.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            Here Is What You Are <span className="gradient-text-primary">Actually Preparing For.</span>
           </h2>
           <p className="fam-body-text">
             The SAT is one of the most important academic decisions a student makes. Understanding exactly what it is — before preparation begins — is the difference between preparing smart and preparing blind.
@@ -124,14 +124,14 @@ export default function FamiliesDeck() {
       {/* SLIDE 5 — WHAT THE SAT ACTUALLY MEASURES */}
       <Slide className="fam-measures">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            The SAT Is Not <span className="highlight">a Knowledge Test.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            The SAT Is Not <span className="gradient-text-primary">a Knowledge Test.</span>
           </h2>
           <p className="fam-body-text">
             Most students prepare for the SAT the same way they prepare for a school exam — by studying content. That is not wrong. But it is not enough. The SAT measures three things that classroom preparation alone does not build:
           </p>
           <div className="fam-three-cards">
-            <div className="fam-card">
+            <div className="fam-card glass-card">
               <div className="fam-card-accent accent-primary" />
               <div className="fam-card-body">
                 <div className="fam-card-num">01</div>
@@ -139,7 +139,7 @@ export default function FamiliesDeck() {
                 <p>The ability to apply what you know quickly, accurately, and consistently — under timed conditions.</p>
               </div>
             </div>
-            <div className="fam-card">
+            <div className="fam-card glass-card">
               <div className="fam-card-accent accent-primary" />
               <div className="fam-card-body">
                 <div className="fam-card-num">02</div>
@@ -147,7 +147,7 @@ export default function FamiliesDeck() {
                 <p>Every section has a specific time window. Students who have not trained for this will feel it — regardless of how well they know the material.</p>
               </div>
             </div>
-            <div className="fam-card">
+            <div className="fam-card glass-card">
               <div className="fam-card-accent accent-secondary" />
               <div className="fam-card-body">
                 <div className="fam-card-num">03</div>
@@ -165,14 +165,14 @@ export default function FamiliesDeck() {
       {/* SLIDE 6 — WHERE POINTS ARE WAITING */}
       <Slide className="fam-points">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            This Is Where Your <span className="highlight">Score Grows.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            This Is Where Your <span className="gradient-text-primary">Score Grows.</span>
           </h2>
           <p className="fam-body-text">
             Every student — regardless of where they start — has a score that is higher than their current baseline. The gap between where you are and where you could be is not a reflection of ability. It is a reflection of preparation.
           </p>
           <div className="fam-three-cards">
-            <div className="fam-card">
+            <div className="fam-card glass-card">
               <div className="fam-card-accent accent-primary" />
               <div className="fam-card-body">
                 <div className="fam-card-num">01</div>
@@ -180,7 +180,7 @@ export default function FamiliesDeck() {
                 <p>The average time per question on the SAT is 70 to 90 seconds. Students who have not trained for this pace consistently run out of time — not because they do not know the answer, but because they have not built the speed yet.</p>
               </div>
             </div>
-            <div className="fam-card">
+            <div className="fam-card glass-card">
               <div className="fam-card-accent accent-primary" />
               <div className="fam-card-body">
                 <div className="fam-card-num">02</div>
@@ -188,7 +188,7 @@ export default function FamiliesDeck() {
                 <p>There is a way to approach each question type that is faster, more reliable, and more accurate than the natural instinct. Students who know it gain points. Students who do not, leave them on the table.</p>
               </div>
             </div>
-            <div className="fam-card">
+            <div className="fam-card glass-card">
               <div className="fam-card-accent accent-secondary" />
               <div className="fam-card-body">
                 <div className="fam-card-num">03</div>
@@ -203,8 +203,8 @@ export default function FamiliesDeck() {
       {/* SLIDE 7 — THE SYSTEM */}
       <Slide className="fam-system">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            This Is <span className="highlight">How We Do It.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            This Is <span className="gradient-text-primary">How We Do It.</span>
           </h2>
           <div className="fam-system-steps">
             {[
@@ -232,8 +232,8 @@ export default function FamiliesDeck() {
       {/* SLIDE 8 — POWERED BY ELMY */}
       <Slide className="fam-elmy">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            Your Preparation. <span className="highlight-secondary">Tracked in Real Time.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            Your Preparation. <span className="gradient-text-secondary">Tracked in Real Time.</span>
           </h2>
           <p className="fam-body-text">
             Every student inside TestPrep is powered by <strong>ELMY</strong> — our proprietary education technology platform.
@@ -261,11 +261,11 @@ export default function FamiliesDeck() {
       {/* SLIDE 9 — WE HANDLE EVERYTHING */}
       <Slide className="fam-handle">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            Your Only Job Is to <span className="highlight">Show Up and Perform.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            Your Only Job Is to <span className="gradient-text-primary">Show Up and Perform.</span>
           </h2>
           <div className="fam-three-cards">
-            <div className="fam-card">
+            <div className="fam-card glass-card">
               <div className="fam-card-accent accent-primary" />
               <div className="fam-card-body">
                 <div className="fam-card-num">01</div>
@@ -273,7 +273,7 @@ export default function FamiliesDeck() {
                 <p>Built from your diagnostic data before your first session. You walk in knowing exactly what you are working on and why.</p>
               </div>
             </div>
-            <div className="fam-card">
+            <div className="fam-card glass-card">
               <div className="fam-card-accent accent-primary" />
               <div className="fam-card-body">
                 <div className="fam-card-num">02</div>
@@ -281,7 +281,7 @@ export default function FamiliesDeck() {
                 <p>We handle it for you. One less thing to think about — for you and for your family — so you can focus entirely on your preparation.</p>
               </div>
             </div>
-            <div className="fam-card">
+            <div className="fam-card glass-card">
               <div className="fam-card-accent accent-secondary" />
               <div className="fam-card-body">
                 <div className="fam-card-num">03</div>
@@ -296,8 +296,8 @@ export default function FamiliesDeck() {
       {/* SLIDE 10 — OUR INSTRUCTORS */}
       <Slide className="fam-instructors">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            100+ Instructors. <span className="highlight">One Mission.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            100+ Instructors. <span className="gradient-text-primary">One Mission.</span>
           </h2>
           <p className="fam-body-text">
             Every instructor at TestPrep is selected for one reason: they know how to close the gap between where a student is and where they need to be. Not just academically — strategically, technically, and personally.
@@ -322,8 +322,8 @@ export default function FamiliesDeck() {
       {/* SLIDE 11 — TRUSTED BY */}
       <Slide className="fam-trusted">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            Students and Boards From These Schools <span className="highlight">Trust TestPrep.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            Students and Boards From These Schools <span className="gradient-text-primary">Trust TestPrep.</span>
           </h2>
           <div className="fam-schools-grid">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
@@ -338,8 +338,8 @@ export default function FamiliesDeck() {
       {/* SLIDE 12 — REAL RESULTS */}
       <Slide className="fam-results">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            Real Students. <span className="highlight">Real Score Jumps.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            Real Students. <span className="gradient-text-primary">Real Score Jumps.</span>
           </h2>
           <div className="fam-jumps-grid">
             {[
@@ -353,7 +353,7 @@ export default function FamiliesDeck() {
               const afterPct = (s.after / max) * 100
               const isTop = s.gain >= 500
               return (
-                <div className="fam-jump-card" key={s.name}>
+                <div className="fam-jump-card glass-card" key={s.name}>
                   <div className="fam-jump-header">
                     <div className="fam-jump-name">{s.name}</div>
                     <div className={`fam-jump-gain ${isTop ? 'fam-jump-gain-top' : ''}`}>+{s.gain}</div>
@@ -391,8 +391,8 @@ export default function FamiliesDeck() {
       {/* SLIDE 13 — LIFE AT TESTPREP */}
       <Slide className="fam-life">
         <div className="fam-section-content">
-          <h2 className="fam-headline">
-            You Don't Just Come to Study. <span className="highlight">You Come to Belong.</span>
+          <h2 className="fam-headline animate-on-scroll">
+            You Don't Just Come to Study. <span className="gradient-text-primary">You Come to Belong.</span>
           </h2>
           <p className="fam-body-text">
             TestPrep is not a classroom you walk into and out of. It is a community of students who are serious about their results — and an environment that makes being serious exciting.
@@ -413,14 +413,14 @@ export default function FamiliesDeck() {
 
       {/* SLIDE 14 — TPI LEGENDS / CLOSING */}
       <Slide className="fam-legends">
-        <div className="mesh-bg">
-          <div className="mesh-grid" />
-          <div className="mesh-glow mesh-glow-primary" />
-          <div className="mesh-glow mesh-glow-secondary" />
+        <div className="fam-bg">
+          <div className="dot-grid" />
+          <div className="fam-glow fam-glow-1" />
+          <div className="fam-glow fam-glow-2" />
         </div>
         <div className="fam-legends-content">
           <h2 className="fam-legends-headline">
-            Are You Ready to Become a <span className="highlight-secondary">TestPrep Legend?</span>
+            Are You Ready to Become a <span className="gradient-text-secondary">TestPrep Legend?</span>
           </h2>
           <div className="fam-legends-wall">
             <span>Legends Wall Photo</span>
