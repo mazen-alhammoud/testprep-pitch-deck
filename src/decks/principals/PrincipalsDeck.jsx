@@ -13,7 +13,7 @@ export default function PrincipalsDeck() {
         </div>
         <div className="cover-content">
           <div className="cover-left">
-            <img src="/testpreo-logo.svg" alt="Test.Prep" className="cover-logo" />
+            <img src={`${import.meta.env.BASE_URL}testpreo-logo.svg`} alt="Test.Prep" className="cover-logo" />
             <h1 className="cover-headline">
               We don't teach the test.<br />
               <span className="highlight">We engineer the score.</span>
@@ -22,14 +22,14 @@ export default function PrincipalsDeck() {
           <div className="cover-right">
             <div className="cover-col-stack">
               <div className="cover-img">
-                <img src="/IMG_5004.jpg" alt="TestPrep session" />
+                <img src={`${import.meta.env.BASE_URL}IMG_5004.jpg`} alt="TestPrep session" />
               </div>
               <div className="cover-img">
-                <img src="/IMG_6438.jpg" alt="TestPrep students" />
+                <img src={`${import.meta.env.BASE_URL}IMG_6438.jpg`} alt="TestPrep students" />
               </div>
             </div>
             <div className="cover-img cover-img-tall">
-              <img src="/IMG_6122.jpg" alt="TestPrep classroom" />
+              <img src={`${import.meta.env.BASE_URL}IMG_6122.jpg`} alt="TestPrep classroom" />
             </div>
           </div>
         </div>
@@ -67,13 +67,13 @@ export default function PrincipalsDeck() {
           </h2>
           <div className="partners-grid">
             <div className="partner-logo partner-logo-zoom">
-              <img src="/blob-2.png" alt="Partner 1" />
+              <img src={`${import.meta.env.BASE_URL}blob-2.png`} alt="Partner 1" />
             </div>
             <div className="partner-logo partner-logo-zoom">
-              <img src="/AAMCdatabase_FeaturedImage.png" alt="AAMC" />
+              <img src={`${import.meta.env.BASE_URL}AAMCdatabase_FeaturedImage.png`} alt="AAMC" />
             </div>
             <div className="partner-logo">
-              <img src="/images.png" alt="Partner 3" />
+              <img src={`${import.meta.env.BASE_URL}images.png`} alt="Partner 3" />
             </div>
           </div>
         </div>
@@ -488,7 +488,7 @@ export default function PrincipalsDeck() {
           <div className="mesh-glow mesh-glow-secondary" />
         </div>
         <div className="closing-content">
-          <img src="/testpreo-logo.svg" alt="Test.Prep" className="closing-logo" />
+          <img src={`${import.meta.env.BASE_URL}testpreo-logo.svg`} alt="Test.Prep" className="closing-logo" />
           <h2 className="closing-headline">
             Let's Engineer <span className="highlight">Their Scores.</span>
           </h2>

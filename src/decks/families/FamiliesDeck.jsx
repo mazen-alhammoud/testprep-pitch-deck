@@ -15,7 +15,7 @@ export default function FamiliesDeck() {
         </div>
         <div className="fam-cover-content">
           <div className="fam-cover-left">
-            <img src="/testpreo-logo.svg" alt="Test.Prep" className="fam-cover-logo" />
+            <img src={`${import.meta.env.BASE_URL}testpreo-logo.svg`} alt="Test.Prep" className="fam-cover-logo" />
             <h1 className="fam-cover-headline">
               We don't teach the test.<br />
               <span className="highlight">We engineer the score.</span>
@@ -24,14 +24,14 @@ export default function FamiliesDeck() {
           <div className="fam-cover-right">
             <div className="fam-cover-col-stack">
               <div className="fam-cover-img">
-                <img src="/IMG_5004.jpg" alt="TestPrep session" />
+                <img src={`${import.meta.env.BASE_URL}IMG_5004.jpg`} alt="TestPrep session" />
               </div>
               <div className="fam-cover-img">
-                <img src="/IMG_6438.jpg" alt="TestPrep students" />
+                <img src={`${import.meta.env.BASE_URL}IMG_6438.jpg`} alt="TestPrep students" />
               </div>
             </div>
             <div className="fam-cover-img fam-cover-img-tall">
-              <img src="/IMG_6122.jpg" alt="TestPrep classroom" />
+              <img src={`${import.meta.env.BASE_URL}IMG_6122.jpg`} alt="TestPrep classroom" />
             </div>
           </div>
         </div>
@@ -443,7 +443,7 @@ export default function FamiliesDeck() {
                 <span className="fam-social-tag">Facebook</span>
               </div>
             </div>
-            <img src="/testpreo-logo.svg" alt="Test.Prep" className="fam-legends-logo" />
+            <img src={`${import.meta.env.BASE_URL}testpreo-logo.svg`} alt="Test.Prep" className="fam-legends-logo" />
           </div>
         </div>
       </Slide>

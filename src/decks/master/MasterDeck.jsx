@@ -17,7 +17,7 @@ export default function MasterDeck() {
 
         <div className="landing-content">
           <img
-            src="/testpreo-logo.svg"
+            src={`${import.meta.env.BASE_URL}testpreo-logo.svg`}
             alt="Test.Prep"
             className="logo"
           />
